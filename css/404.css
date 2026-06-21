@@ -1,0 +1,47 @@
+@import url('styles.css');
+body{
+    overflow-x: hidden;
+    max-width: 100%;
+    background-color: #27282A;
+    color: #E7EB38;
+    font-family: "EpilepsySans";
+    letter-spacing: 3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    height: 100vh;
+}
+
+nav{
+    color:  #E7EB38;
+    height: 67px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
+    padding: 0 30px 0 30px;
+    
+}
+
+.big-text{
+    font-size: 64px;
+}
+
+.small-text{
+    font-size: 32px;
+}
+
+.links{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+.links a:hover {
+    background-color: #E7EB38;
+    color: #27282A;
+}
+

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/book.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/icon.png" type="image/x-icon">
+    <title>книга</title>
+</head>
+<body>
+    <nav>
+        <img src="images/Rectangle 8.jpg" alt="">
+        <div class="links small-text">
+            <a style="width: fit-content;padding: 10px 30px 10px 30px;" href="about.html">о нас</a>
+            <a style="width: fit-content;padding: 10px 30px 10px 30px;"  href="shop.html">магазин</a>
+            <a style="width: fit-content;padding: 10px 30px 10px 30px;"  href="event.html">мероприятия</a>
+            <a style="width: fit-content;padding: 10px 30px 10px 30px;"  href="book.html">книга</a>
+            <img src="images/cart.png" alt="">
+        </div>
+
+                <!-- ээээ бургерменю -->
+        <button class="burger" id="burgerBtn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+        <!-- Мобильное меню -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="about.html">о нас</a>
+        <a href="shop.html">магазин</a>
+        <a href="event.html">мероприятия</a>
+        <a href="book.html">книга</a>
+        <img src="images/cart.png" alt="Корзина" style="width: 32px;">
+    </div>
+
+    <main>
+        <div class="book-row">
+            <p style="max-width: 741px;" class="big-text">У&nbsp;нас есть небольшая книга о&nbsp;том, как холодный чай оказался в&nbsp;банке из-под газировки.</p>
+            <img src="images/p1.png" alt="">
+        </div>
+
+        <div style="padding-top: 130px;" class="book-row">
+            <img src="images/p2.png" alt="">
+            <p style="max-width: 430px;" class="small-text">Внутри — история создания проекта, от первой мятой банки до целой чайной линии.</p>
+        </div>
+
+        <div style="padding-top: 130px;" class="book-row">
+            <p style="max-width: 430px;" class="small-text">А&nbsp;ещё мы&nbsp;рассказали всё о&nbsp;матче и&nbsp;чае: сортах, заварке и&nbsp;том, почему их&nbsp;можно и&nbsp;нужно пить холодными.</p>
+            <img src="images/p3.png" alt="">
+        </div>
+
+        <div style="padding-top: 130px;" class="book-row">
+            <img src="images/p4.png" alt="">
+            <p style="max-width: 430px;" class="small-text">Мы&nbsp;выложили книгу в&nbsp;открытый доступ. Листай онлайн с&nbsp;любого устройства&nbsp;&mdash; без регистрации и&nbsp;смс.</p>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>silentharvest@gmail.com</p>
+        <p>Карпив Полина</p>
+    </footer>
+
+    <script>
+        (function() {
+            const burger = document.getElementById('burgerBtn');
+            const mobileMenu = document.getElementById('mobileMenu');
+
+            burger.addEventListener('click', function(e) {
+                e.stopPropagation();
+                burger.classList.toggle('active');
+                mobileMenu.classList.toggle('open');
+            });
+
+            
+            const mobileLinks = mobileMenu.querySelectorAll('a');
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    burger.classList.remove('active');
+                    mobileMenu.classList.remove('open');
+                });
+            });
+
+            
+            document.addEventListener('click', function(e) {
+                const isClickInsideNav = nav.contains(e.target);
+                if (!isClickInsideNav && mobileMenu.classList.contains('open')) {
+                    burger.classList.remove('active');
+                    mobileMenu.classList.remove('open');
+                }
+            });
+            window.addEventListener('resize', function() {
+                if (window.innerWidth > 933) {
+                    burger.classList.remove('active');
+                    mobileMenu.classList.remove('open');
+                }
+            });
+        })();
+    </script>
+</body>
+</html>

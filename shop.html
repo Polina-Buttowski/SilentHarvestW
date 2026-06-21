@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/shop.css">
+    <link rel="icon" href="images/icon.png" type="image/x-icon">
+    <title>Магазин</title>
+</head>
+<body>
+    <nav>
+        <img src="images/Rectangle 8.jpg" alt="">
+        <div class="links small-text">
+            <a style="width: fit-content;padding: 10px 30px 10px 30px;" href="about.html">о нас</a>
+            <a style="width: fit-content;padding: 10px 30px 10px 30px;"  href="shop.html">магазин</a>
+            <a style="width: fit-content;padding: 10px 30px 10px 30px;"  href="event.html">мероприятия</a>
+            <a style="width: fit-content;padding: 10px 30px 10px 30px;"  href="book.html">книга</a>
+            <img src="images/cart.png" alt="">
+        </div>
+    </nav>
+
+    <main>
+        <div id="First-page">
+           <div class="card">
+                <div class="image-wrapper">
+                    <img src="images/43550.png" alt="Стикеры">
+                    <div class="card-overlay">
+                        <div class="item-name big-text">стикеры</div> 
+                        <div class="item-price small-text">250 ₽</div>
+                    </div>
+                </div>
+                <a class="button" href="404.html">в корзину</a>
+            </div>
+
+            <div class="card">
+                <div class="image-wrapper">
+                    <img src="images/43551.png" alt="Плакаты">
+                    <div class="card-overlay">
+                        <div class="item-name big-text">плакаты</div> 
+                        <div class="item-price small-text">250 ₽</div>
+                    </div>
+                </div>
+                <a class="button" href="404.html">в корзину</a>
+            </div>
+
+            <div class="card">
+                <div class="image-wrapper">
+                    <img src="images/43549.png" alt="Термос">
+                    <div class="card-overlay">
+                        <div class="item-name big-text">термос</div> 
+                        <div class="item-price small-text">250 ₽</div>
+                    </div>
+                </div>
+                <a class="button" href="404.html">в корзину</a>
+            </div>
+        </div>
+
+
+
+        <div id="Second-page">
+            <div class="constructor">
+                <p class="big-text" style="max-width: 584px;">Хочешь собрать матчу или чай под себя?</p>
+                <p class="small-text" style="max-width: 409px;">У нас есть отдельный сайт-конструктор, где ты сам выбираешь вкус, крепость и банку. Собирай свой идеальный напиток и заказывай.</p>
+                <a class="button" href="https://polina-buttowski.github.io/Quiet-harvest/">перейти в конструкотор</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>silentharvest@gmail.com</p>
+        <p>Карпив Полина</p>
+    </footer>
+
+    <script>
+        let cards = document.querySelectorAll('.card');
+        
+        for (let i = 0; i < cards.length; i++) {
+            let overlay = cards[i].querySelector('.card-overlay');
+            if (overlay) {
+                let names = ['Стикеры', 'Плакаты', 'Термос'];
+                let nameEl = overlay.querySelector('.item-name');
+                let priceEl = overlay.querySelector('.item-price');
+                
+                if (nameEl) nameEl.textContent = names[i];
+                if (priceEl) priceEl.textContent = '250 ₽';
+            }
+        }
+    </script>
+</body>
+</html>

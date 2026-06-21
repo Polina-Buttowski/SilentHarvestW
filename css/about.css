@@ -1,0 +1,124 @@
+@import url('styles.css');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 100%;
+    background-color: #27282A;
+    color: #E7EB38;
+    font-family: "EpilepsySans";
+    letter-spacing: 0.03em;
+}
+
+nav {
+    background-color: #E7EB38;
+    color: #27282A;
+    height: 67px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    padding-top: 67px; 
+    min-height: 100vh;
+}
+
+.left-video {
+    flex: 1;
+    position: sticky;
+    top: 67px; 
+    height: calc(100vh - 67px); 
+    overflow: hidden;
+}
+
+.left-video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.right-content {
+    flex: 1;
+    padding: 20px 40px 100px 40px;
+    height: 200vh;
+}
+
+.links {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.links a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.links a:hover {
+    background-color: #27282A;
+    color: #E7EB38;
+}
+
+.big-text {
+    font-size: 64px;
+}
+
+.small-text {
+    font-size: 32px;
+}
+
+.statistyc{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding-top: 250px;
+}
+
+.left-text-block{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 383px;
+}
+
+.right-text-block{
+    display: flex;
+    flex-direction: column;
+    width: 430px;
+    padding-top: 400px;
+}
+.bottom-text-block{
+    display: flex;
+    flex-direction: column;
+    width: 430px;
+    padding-top: 100px;
+}
+.statistyc-text-block{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+::selection {
+    background-color: #E7EB38;  
+    color: #27282A           
+}
+
+::-moz-selection {
+    background-color: #E7EB38; 
+    color: #27282A 
+}
