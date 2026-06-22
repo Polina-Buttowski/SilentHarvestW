@@ -26,7 +26,6 @@
         </button>
     </nav>
 
-        <!-- Мобильное меню -->
     <div class="mobile-menu" id="mobileMenu">
         <a href="about.html">о нас</a>
         <a href="shop.html">магазин</a>
@@ -62,42 +61,6 @@
         <p>silentharvest@gmail.com</p>
         <p>Карпив Полина</p>
     </footer>
-
-    <script>
-        (function() {
-            const burger = document.getElementById('burgerBtn');
-            const mobileMenu = document.getElementById('mobileMenu');
-
-            burger.addEventListener('click', function(e) {
-                e.stopPropagation();
-                burger.classList.toggle('active');
-                mobileMenu.classList.toggle('open');
-            });
-
-            
-            const mobileLinks = mobileMenu.querySelectorAll('a');
-            mobileLinks.forEach(link => {
-                link.addEventListener('click', function() {
-                    burger.classList.remove('active');
-                    mobileMenu.classList.remove('open');
-                });
-            });
-
-            
-            document.addEventListener('click', function(e) {
-                const isClickInsideNav = nav.contains(e.target);
-                if (!isClickInsideNav && mobileMenu.classList.contains('open')) {
-                    burger.classList.remove('active');
-                    mobileMenu.classList.remove('open');
-                }
-            });
-            window.addEventListener('resize', function() {
-                if (window.innerWidth > 933) {
-                    burger.classList.remove('active');
-                    mobileMenu.classList.remove('open');
-                }
-            });
-        })();
-    </script>
+    <script src="burger-menu.js" defer></script>
 </body>
 </html>
